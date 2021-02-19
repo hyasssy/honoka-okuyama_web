@@ -1,0 +1,268 @@
+/*共通CSS 最初に読み込む。*/
+@font-face {
+  font-family: "Moon";
+  src: url(../fonts/MoonLight.otf);
+}
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url(../fonts/HelveticaNeue.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url(../fonts/HelveticaNeue-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "GillSans";
+  src: url(../fonts/GillSans-Light.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "GillSans";
+  src: url(../fonts/GillSans.ttf);
+  font-weight: 400;
+}
+
+
+:root {
+  --titleblack: rgb(0, 0, 14);
+  --titlehoverblue: rgb(143, 183, 193);/*rgb(94, 81, 238);*/
+  --baseblack: rgb(84, 89, 90);
+  --baselink: rgb(66, 115, 223);
+  --basehoverblue: rgb(143, 183, 193);
+  --neutralgray: rgb(140,140,140);
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 10px;
+  color: var(--baseblack);
+  /*background-color: rgb(252, 253, 252);*/
+  font-family: "GillSans", a-otf-gothic-bbb-pr6n, sans-serif;/*ニュートラル*/
+}
+html {
+  visibility: hidden;
+}
+html.wf-active,
+html.loading-delay {
+  visibility: visible;
+}
+
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: var(--baselink);
+}
+a:link,
+a:visited {
+  color: var(--baselink);
+}
+a:hover,
+a:active {
+  color: var(--basehoverblue);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  margin-left: 2px;
+  padding-top: 0.1rem;
+  padding-bottom: 2rem;
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-family: "GillSans";
+  width: 100%;
+  display: flex;
+  align-items: flex-end; /*下揃え*/
+  background: linear-gradient(
+    180deg,
+    rgba(252, 253, 252, 1) 0%,
+    rgba(252, 253, 252, 1) 30%,
+    rgba(252, 253, 252, 0) 100%
+  );
+  z-index: 100;
+  color: var(--titleblack);
+}
+
+.header a:link,
+.header a:visited {
+  color: var(--titleblack);
+}
+.header a:hover,
+.header a:active {
+  color: var(--titlehoverblue);
+}
+
+.header-list-container {
+  display: flex;
+}
+.header-list {
+  bottom: 0;
+  font-size: 1.9rem;
+  margin-left: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 0px;
+  font-family: futura-pt;
+  display: none;
+}
+
+
+
+
+#nav-container{
+  position: fixed;
+  width: 100%;
+  height: 0;
+  transition: 0.3s;
+  z-index: 999;
+}
+.nav-unshown{
+  display: none;
+}
+#nav-open{
+  float: right;
+  transition: 0.3s;
+}
+#nav-open img{
+  width: 4rem;
+  margin-top: 0.3rem;
+  margin-right: 0.6rem;
+  /*width: 4.6rem;
+  margin-top: 0.5rem;
+  margin-right: 0.8rem;
+  transition: 0.3s;*/
+}
+#nav-open:hover, #nav-open:active{
+  opacity: 0.6;
+}
+/*#nav-open:hover img, #nav-open:active img{
+  width: 5rem;
+  margin-top: 0.3rem;
+  margin-right: 0.6rem;
+}*/
+#nav-close{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /*background: black;*/
+  opacity: 0;
+  transition: 0.3s;
+}
+/*中身*/
+#nav-contents {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 102;/*最前面に*/
+  width:80%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 330px;/*最大幅（調整してください）*/
+  height: 100%;
+  background: rgba(252, 253, 252, 0.85);/*背景色*/
+  transition: 0.3s;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);/*左に隠しておく*/
+  opacity: 0.3;
+  display: flex;
+  align-items: center;
+}
+#nav-wrapper {
+  padding-left: 20%;
+  margin-top: 4rem;
+}
+#nav-wrapper a{
+  display: block;
+  font-family: futura-pt;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  transition: 0.3s;
+  margin-bottom: 3rem;
+}
+#nav-wrapper a:link,
+#nav-wrapper a:visited {
+  color: var(--titleblack);
+}
+#nav-wrapper a:hover,
+#nav-wrapper a:active {
+  color: var(--titlehoverblue);
+}
+.nav-snsicon{
+  margin-top: 10rem;
+  margin-bottom: 15rem;
+}
+.nav-snsicon a{
+  float: left;
+  margin-right: 3rem;
+}
+.nav-snsicon img{
+  width: 3rem;
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block;/*カバーを表示*/
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-contents {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*中身を表示（右へスライド）*/
+  box-shadow: 10px 0px 80px rgba(0,0,14,.6);
+  opacity: 1;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 480px){
+  #nav-container{
+    display: none;
+  }
+  .header-list{
+    display: inline;/*default*/
+  }
+}
+
+.copyright {
+  margin-top: 20rem;
+  bottom: 1px;
+  width: 100%;
+  text-align: center;
+  font-family: futura-pt, kozuka-gothic-pro, sans-serif;
+  font-size: 1rem;
+  letter-spacing:1px;
+  font-weight: 300;
+  color: var(--neutralgray);
+}
+
+@media screen and (min-width: 480px){
+  /*タブレットサイズ以上*/
+  .header-list {
+    font-size: 2rem;
+    margin-left: 2.5rem;
+  }
+  .copyright {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 896px) {
+  /*pcサイズ以上*/
+  .header {
+    font-size: 3rem;
+    line-height: 3.1rem;
+  }
+  .header-list {
+    font-size: 2.4rem;
+  }
+}

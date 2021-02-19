@@ -1,0 +1,127 @@
+/*css of Top page*/
+.fix {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+}
+.bg-slider {
+  margin: 4.6rem 0 0 0.6rem;
+  width: calc(100% - 1.2rem);
+  height: calc(100% - 5.2rem);
+  /*height: -webkit-fill-available - 0.6rem; /*iosのsafariでメニューバーに隠れてしまう問題解決*/
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#img-filter {
+  background-color: rgba(0, 0, 14, 0.05);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#self-introduction {
+  width: 100%;
+  height: 100%;
+  color: rgb(252, 253, 252);
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  font-size: 30px;
+  word-wrap: break-word;
+  z-index: 999;
+}
+#self-introduction::-webkit-scrollbar {
+  width: 0.5rem;
+}
+#self-introduction::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+#self-introduction::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0);
+}
+
+#top-space {
+  position: relative;
+  width: 100%;
+  height: Calc(100% - 6rem);
+  text-align: center;
+}
+.down-arrow img {
+  position: absolute;
+  bottom: -3rem;
+  width: 3.5rem;
+  opacity: 0.9;
+
+  /*上下アニメーション*/
+  animation-name: float-arrow;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 0.75s;
+}
+
+@keyframes float-arrow {
+  /*矢印アニメーション*/
+  0% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(0, 15px);
+  }
+}
+
+.cv-contents {
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+  margin-bottom: 30rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+}
+.name {
+  margin-bottom: 3rem;
+}
+.short-passage {
+  margin-top: 12rem;
+  margin-bottom: 10rem;
+}
+.text-container {
+  display: flex;
+}
+.year-list {
+  margin-right: 2.5rem;
+}
+.subtitle {
+  margin-bottom: 0.1rem;
+}
+.langborder {
+  margin: 8rem 0;
+  border-bottom: 1px solid rgb(177, 188, 190);
+}
+
+.copyright {
+  color: rgb(252, 253, 252) !important;
+}
+
+@media screen and (min-width: 480px) {
+  /*タブレットサイズ以降*/
+  .cv-contents {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 896px) {
+  /*PCサイズ以降*/
+  .cv-contents {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}

@@ -13,36 +13,34 @@
   src: url(../fonts/HelveticaNeue-Light.ttf);
   font-weight: 300;
 }
-@font-face{
+@font-face {
   font-family: "Hannari";
   src: url(../fonts/hannari.otf);
 }
-@font-face{
+@font-face {
   font-family: "Karakaze";
   src: url(../fonts/karakaze.otf);
 }
-@font-face{
+@font-face {
   font-family: "Yugothic";
   src: url(../fonts/YuGothic-Light.ttf);
   font-weight: 300;
 }
-@font-face{
+@font-face {
   font-family: "Yugothic";
   src: url(../fonts/YuGothic-Regular.ttf);
   font-weight: 400;
 }
 
-
-
 :root {
   /* カラースキームを作る 探り中。*/
   --titleblack: rgb(0, 0, 14);
-  --titlehoverblue: rgb(143, 183, 193);/*rgb(94, 81, 238);*/
+  --titlehoverblue: rgb(143, 183, 193); /*rgb(94, 81, 238);*/
   --baseblack: rgb(84, 89, 90);
   --baselink: rgb(66, 115, 223);
   --basehoverblue: rgb(143, 183, 193);
-  --neutralgray: rgb(140,140,140);
-  --snowwhite: rgb(234,241,250);
+  --neutralgray: rgb(140, 140, 140);
+  --snowwhite: rgb(234, 241, 250);
   --forestwhite: rgb(204, 220, 225);
 }
 body,
@@ -53,7 +51,7 @@ html {
   font-size: 10px;
   color: var(--baseblack);
   background-color: var(--forestwhite);
-  font-family: "GillSans", a-otf-gothic-bbb-pr6n, sans-serif;/*ニュートラル*/
+  font-family: "GillSans", a-otf-gothic-bbb-pr6n, sans-serif; /*ニュートラル*/
 }
 html {
   visibility: hidden;
@@ -62,7 +60,6 @@ html.wf-active,
 html.loading-delay {
   visibility: visible;
 }
-
 
 a {
   text-decoration: none;
@@ -76,6 +73,31 @@ a:visited {
 a:hover,
 a:active {
   color: var(--basehoverblue);
+}
+
+#nav-box {
+  width: 30%;
+  height: auto;
+  padding-left: 4vw;
+  padding-top: 10vh;
+}
+#title a {
+  width: 100%;
+  font-family: "Karakaze";
+  font-size: 6vw;
+  white-space: nowrap;
+  color: var(--baseblack);
+}
+#nav-list {
+  padding-top: 3vh;
+  padding-left: 2vw;
+}
+#nav-list a {
+  display: block;
+  font-family: "Moon";
+  font-size: 4vw;
+  letter-spacing: 0.3vw;
+  color: var(--baseblack);
 }
 
 .header {
@@ -124,42 +146,34 @@ a:active {
   display: none;
 }
 
-
-
-
-
-
-
-
-
-@media screen and (min-width: 480px){
-  #nav-container{
+@media screen and (min-width: 480px) {
+  #nav-container {
     display: none;
   }
-  .header-list{
-    display: inline;/*default*/
+  .header-list {
+    display: inline; /*default*/
   }
 }
 
-.copyright {
+#copyright {
   margin-top: 20rem;
   bottom: 1px;
   width: 100%;
   text-align: center;
   font-family: sans-serif;
   font-size: 1rem;
-  letter-spacing:1px;
+  letter-spacing: 1px;
   font-weight: 300;
   color: var(--neutralgray);
 }
 
-@media screen and (min-width: 480px){
+@media screen and (min-width: 480px) {
   /*タブレットサイズ以上*/
   .header-list {
     font-size: 2rem;
     margin-left: 2.5rem;
   }
-  .copyright {
+  #copyright {
     font-size: 1.2rem;
   }
 }

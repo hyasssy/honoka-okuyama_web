@@ -32,24 +32,18 @@
   word-wrap: break-word;
   z-index: 999;
 }
-#self-introduction::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0.5rem;
 }
-#self-introduction::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.5);
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 1rem;
 }
-#self-introduction::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   border-radius: 1rem;
   background: rgba(0, 0, 0, 0);
-}
+} */
 
-#top-space {
-  position: relative;
-  width: 100%;
-  height: Calc(100% - 6rem);
-  text-align: center;
-}
 .down-arrow img {
   position: absolute;
   bottom: -3rem;
@@ -74,37 +68,7 @@
   }
 }
 
-.cv-contents {
-  margin-left: 0.6rem;
-  margin-right: 0.6rem;
-  margin-bottom: 30rem;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  line-height: 1.8rem;
-  font-size: 1.2rem;
-}
-.name {
-  margin-bottom: 3rem;
-}
-.short-passage {
-  margin-top: 12rem;
-  margin-bottom: 10rem;
-}
-.text-container {
-  display: flex;
-}
-.year-list {
-  margin-right: 2.5rem;
-}
-.subtitle {
-  margin-bottom: 0.1rem;
-}
-.langborder {
-  margin: 8rem 0;
-  border-bottom: 1px solid rgb(177, 188, 190);
-}
-
-.copyright {
+#copyright {
   color: rgb(252, 253, 252) !important;
 }
 

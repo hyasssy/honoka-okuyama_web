@@ -40,8 +40,9 @@
   --baselink: rgb(66, 115, 223);
   --basehoverblue: rgb(143, 183, 193);
   --neutralgray: rgb(140, 140, 140);
-  --snowwhite: rgb(234, 241, 250);
-  --forestwhite: rgb(204, 220, 225);
+  --snowwhite: rgb(235, 241, 249);
+  --forestwhite: rgb(227, 236, 240);
+  --nightnavy: rgb(41, 62, 133);
 }
 body,
 html {
@@ -50,8 +51,9 @@ html {
   height: 100%;
   font-size: 10px;
   color: var(--baseblack);
-  background-color: var(--forestwhite);
-  font-family: "GillSans", a-otf-gothic-bbb-pr6n, sans-serif; /*ニュートラル*/
+  background-color: var(--snowwhite);
+  background-color: white;
+  font-family: a-otf-gothic-bbb-pr6n, sans-serif; /*ニュートラル*/
 }
 html {
   visibility: hidden;
@@ -59,6 +61,13 @@ html {
 html.wf-active,
 html.loading-delay {
   visibility: visible;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
 }
 
 a {
@@ -75,115 +84,59 @@ a:active {
   color: var(--basehoverblue);
 }
 
+
+#wrapper{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
 #nav-box {
-  width: 30%;
-  height: auto;
-  padding-left: 4vw;
-  padding-top: 10vh;
+  z-index: 99;/*手前表示*/
+  position: fixed;
+  /* background-color: rgb(255,0,0,.2); */
+  top: 0;
+  padding-left: 5vw;
+  padding-top: 5vh;
 }
 #title a {
   width: 100%;
   font-family: "Karakaze";
-  font-size: 6vw;
+  font-size: 6rem;
   white-space: nowrap;
   color: var(--baseblack);
 }
 #nav-list {
   padding-top: 3vh;
-  padding-left: 2vw;
+  padding-left: 1vw;
 }
 #nav-list a {
   display: block;
   font-family: "Moon";
-  font-size: 4vw;
+  font-size: 2.7rem;
+  white-space: nowrap;
   letter-spacing: 0.3vw;
   color: var(--baseblack);
+  margin-bottom: 1vh;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  margin-left: 2px;
-  padding-top: 0.1rem;
-  padding-bottom: 2rem;
-  font-size: 2.5rem;
-  line-height: 2.6rem;
-  font-weight: 400;
-  letter-spacing: 4px;
-  font-family: "GillSans";
-  width: 100%;
-  display: flex;
-  align-items: flex-end; /*下揃え*/
-  background: linear-gradient(
-    180deg,
-    rgba(252, 253, 252, 1) 0%,
-    rgba(252, 253, 252, 1) 30%,
-    rgba(252, 253, 252, 0) 100%
-  );
-  z-index: 100;
-  color: var(--titleblack);
-}
 
-.header a:link,
-.header a:visited {
-  color: var(--titleblack);
-}
-.header a:hover,
-.header a:active {
-  color: var(--titlehoverblue);
-}
-
-.header-list-container {
-  display: flex;
-}
-.header-list {
-  bottom: 0;
-  font-size: 1.9rem;
-  margin-left: 1.3rem;
-  font-weight: 300;
-  letter-spacing: 0px;
-  font-family: futura-pt;
-  display: none;
-}
-
-@media screen and (min-width: 480px) {
-  #nav-container {
-    display: none;
-  }
-  .header-list {
-    display: inline; /*default*/
-  }
-}
 
 #copyright {
-  margin-top: 20rem;
-  bottom: 1px;
+  background-color: yellow;
+  padding-top: 20rem;
+  /* bottom: 1px; */
   width: 100%;
   text-align: center;
   font-family: sans-serif;
   font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 300;
-  color: var(--neutralgray);
+  color: var(--baseblack);
 }
 
 @media screen and (min-width: 480px) {
   /*タブレットサイズ以上*/
-  .header-list {
-    font-size: 2rem;
-    margin-left: 2.5rem;
-  }
-  #copyright {
-    font-size: 1.2rem;
-  }
 }
 @media screen and (min-width: 896px) {
   /*pcサイズ以上*/
-  .header {
-    font-size: 3rem;
-    line-height: 3.1rem;
-  }
-  .header-list {
-    font-size: 2.4rem;
-  }
 }

@@ -21,7 +21,7 @@
   <link rel="stylesheet" type="text/css" href="css/common-style.css">
   <link rel="stylesheet" type="text/css" href="css/top-style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
-  <script>
+  <!--<script>
     jQuery(function ($) {
       $('.bg-slider').bgSwitcher({
         images: [''], // 切り替える背景画像を指定
@@ -33,7 +33,7 @@
         easing: "swing" // エフェクトのイージングをlinear,swingから指定
       });
     });
-  </script>
+  </script>-->
 
   <!--AdobeFont読み込み-->
   <script>
@@ -56,26 +56,32 @@
 </head>
 
 <body>
-  <div id="wrapper">
-    <div id="nav-box">
-      <div id="title"><a href="/index.html">おくやまほのか</a></div>
-      <div id="nav-list">
-        <a href="./news/index.html">News</a>
-        <a href="./gallery/index.html">Gallery</a>
-        <a href="./cv/index.html">CV</a>
-        <a href="#contact">Contact</a>
+  <div id="nav-box">
+    <div id="title"><a href="/index.html">おくやまほのか</a></div>
+    <div id="nav-list">
+      <a href="./news/index.html">News</a>
+      <a href="./gallery/index.html">Gallery</a>
+      <a href="./cv/index.html">CV</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div id="top-wrapper">
+    <!-- 画面の高さに合わせたwrapper -->
+    <div class="imageframe-wrapper">
+      <div class="imageframe">
+        <img src="./imgs/sirakaba.jpg" alt="トップ写真">
       </div>
+      <div class="img-caption">六月風 / Rokugatsukaze / 2020 / oil on canvas.</div>
     </div>
-    <div id="contents-box">
-      <div class="imageframe"></div>
-    </div>
+    <div id="shortintroduction">Honoka Okuyama : Oil painter</div>
   </div>
+  <div id="cv-wrapper"></div>
 
-  <div id="self-introduction">
+  <!-- <div id="self-introduction">
     <div class="down-arrow"><img src="./imgs/icon/icon_down.png" alt="下向きのナビアイコン"></div>
-  </div>
+  </div> -->
 
-  <div id="copyright"><span>©️ 2021, Honoka Okuyama</span></div>
+  <div id="copyright">©️ 2021, Honoka Okuyama</div>
 </body>
 
 </html>

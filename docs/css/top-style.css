@@ -1,5 +1,5 @@
 /*css of Top page*/
-.fix {
+/* .fix {
   position: fixed;
   width: 100vw;
   height: 100%;
@@ -9,17 +9,62 @@
   width: calc(100% - 1.2rem);
   height: calc(100% - 5.2rem);
   /*height: -webkit-fill-available - 0.6rem; /*iosのsafariでメニューバーに隠れてしまう問題解決*/
-  background-position: center center;
+  /* background-position: center center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-#img-filter {
-  background-color: rgba(0, 0, 14, 0.05);
-  position: absolute;
+} */
+
+#top-wrapper{
+  height: 100vh;
   width: 100%;
+  position: relative;
+  /* background-color: violet; */
+}
+.imageframe-wrapper{
+  width: 80%;
   height: 100%;
+  position: absolute;
+  height:100vh;
+  right: 0rem;
+  /* bottom: 3rem; */
+  align-items: center;
+  /* background-color: rgb(255,0,0,.3); */
+}
+.imageframe{
+  width: calc(100% - 5vw);
+  height: 100%;
+  position: absolute;
+  right: 5vw;
+  bottom: 5vw;
+  display: flex;
+  align-items: flex-end;
+  /* background-color: var(--snowwhite); */
+  /* padding: .5rem; */
+}
+.imageframe img{
+  width: 100%;
+  max-height: 78%;
+  object-fit: cover;
+}
+.img-caption{
+  position: absolute;
+  right: 5vw;
+  bottom: calc(5vw - 1rem);
+  text-align: right;
+  /* margin-right: -.5rem; */
+}
+
+#shortintroduction{
+  position: absolute;
+  /* background-color: var(--nightnavy); */
+  color: var(--baseblack);
+  font-size: 1.2rem;
+  left: 6vw;/*navに合わせて調整*/
+  top: 80vh;/*よう調整*/
+  transform-origin: 0 100%;
+  transform: rotate(90deg);
 }
 
 #self-introduction {
@@ -32,17 +77,6 @@
   word-wrap: break-word;
   z-index: 999;
 }
-::-webkit-scrollbar {
-  width: 0.5rem;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 1rem;
-}
-/* ::-webkit-scrollbar-track {
-  border-radius: 1rem;
-  background: rgba(0, 0, 0, 0);
-} */
 
 .down-arrow img {
   position: absolute;
@@ -66,10 +100,6 @@
   100% {
     transform: translate(0, 15px);
   }
-}
-
-#copyright {
-  color: rgb(252, 253, 252) !important;
 }
 
 @media screen and (min-width: 480px) {

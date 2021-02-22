@@ -63,10 +63,6 @@ html {
 html {
   visibility: hidden;
 }
-html.wf-active,
-html.loading-delay {
-  visibility: visible;
-}
 ::-webkit-scrollbar {
   width: 0.5rem;
 }

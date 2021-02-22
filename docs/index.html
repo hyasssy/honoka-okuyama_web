@@ -49,9 +49,22 @@
 
   <!-- FOUTを防ぐため-->
   <script type="text/javascript">
-    setTimeout(function () {
-      document.getElementsByTagName("html")[0].classList.add("loading-delay");
-    }, 3000);
+    // 50msごとにクラスを取得したかチェックして処理
+    var element = $("html").get(0);
+    var func;
+    var count = 0;
+    func = setInterval(function () {
+      //2500ms以上いったら強制フェードイン
+      if (element.classList.contains("wf-active") || count > 50) {
+        stop();
+      }
+      count++;
+    }, 50);
+    function stop() {
+      clearInterval(func);
+      count = 10;
+      $("html").hide().css({ visibility: "visible" }).fadeIn(1200);
+    }
   </script>
 </head>
 

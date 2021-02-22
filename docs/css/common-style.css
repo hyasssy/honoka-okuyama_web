@@ -14,6 +14,26 @@
   font-weight: 300;
 }
 @font-face {
+  font-family: "HelveticaNeue";
+  src: url(../fonts/HelveticaNeue-UltraLight.ttf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url(../fonts/HelveticaNeue-Thin.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "HiraKakuGo";
+  src: url(../fonts/HiraKakuGo_W0.ttc);
+  font-weight: 100;
+}
+@font-face {
+  font-family: "HiraKakuGo";
+  src: url(../fonts/HiraKakuGo_W1.ttc);
+  font-weight: 200;
+}
+@font-face {
   font-family: "Hannari";
   src: url(../fonts/hannari.otf);
 }
@@ -31,6 +51,11 @@
   src: url(../fonts/YuGothic-Regular.ttf);
   font-weight: 400;
 }
+@font-face {
+  font-family: "Yumin";
+  src: url(../fonts/YUMINL.TTF);
+  font-weight: 300;
+}
 
 :root {
   /* カラースキームを作る 探り中。*/
@@ -43,6 +68,8 @@
   --snowwhite: rgb(235, 241, 249);
   --forestwhite: rgb(227, 236, 240);
   --nightnavy: rgb(41, 62, 133);
+  --lemonyellow: rgb(246, 255, 77);
+  --grassgreen: rgb(192, 247, 147);
 }
 body,
 html {
@@ -53,7 +80,9 @@ html {
   color: var(--baseblack);
   background-color: var(--snowwhite);
   background-color: white;
-  font-family: a-otf-gothic-bbb-pr6n, sans-serif; /*ニュートラル*/
+  font-family: "HelveticaNeue", "HiraKakuGo", sans-serif;/*ニュートラル*/
+  font-weight: 200;
+  letter-spacing: .1rem;
 }
 html {
   visibility: hidden;
@@ -73,11 +102,11 @@ html.loading-delay {
 a {
   text-decoration: none;
   transition: 0.3s;
-  color: var(--baselink);
+  color: var(--nightnavy);
 }
 a:link,
 a:visited {
-  color: var(--baselink);
+  color: var(--nightnavy);
 }
 a:hover,
 a:active {
@@ -122,10 +151,14 @@ a:active {
 
 
 #copyright {
-  background-color: yellow;
-  padding-top: 20rem;
+  border-top: solid 0.5px var(--nightnavy);
+  opacity: .6;
+  /* background-color: var(--lemonyellow); */
+  padding-top: 7rem;
+  padding-bottom: 7rem;
   /* bottom: 1px; */
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
   text-align: center;
   font-family: sans-serif;
   font-size: 1rem;

@@ -10,23 +10,8 @@
 }
 @font-face {
   font-family: "HelveticaNeue";
-  src: url(../fonts/HelveticaNeue-Light.ttf);
-  font-weight: 300;
-}
-@font-face {
-  font-family: "HelveticaNeue";
-  src: url(../fonts/HelveticaNeue-UltraLight.ttf);
-  font-weight: 100;
-}
-@font-face {
-  font-family: "HelveticaNeue";
   src: url(../fonts/HelveticaNeue-Thin.ttf);
   font-weight: 200;
-}
-@font-face {
-  font-family: "HiraKakuGo";
-  src: url(../fonts/HiraKakuGo_W0.ttc);
-  font-weight: 100;
 }
 @font-face {
   font-family: "HiraKakuGo";
@@ -40,16 +25,6 @@
 @font-face {
   font-family: "Karakaze";
   src: url(../fonts/karakaze.otf);
-}
-@font-face {
-  font-family: "Yugothic";
-  src: url(../fonts/YuGothic-Light.ttf);
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Yugothic";
-  src: url(../fonts/YuGothic-Regular.ttf);
-  font-weight: 400;
 }
 @font-face {
   font-family: "Yumin";
@@ -128,7 +103,7 @@ a:active {
   padding-left: 5vw;
   padding-top: 5vh;
 }
-#title a {
+#nav-title a {
   width: 100%;
   font-family: "Karakaze";
   font-size: 6rem;

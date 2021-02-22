@@ -10,14 +10,9 @@
 }
 #gallery-box{
   width: 50%;
-  max-width: 60rem;
+  /* max-width: 60rem; */
   margin-left: 30%;
-  /* background-color: rgb(225,247,85,.57); */
-  background-image: url(../imgs/woodsurface.svg);
-  /* background-repeat: no-repeat; */
-  background-size: cover;
-  box-shadow: 0 0 1px 1px white inset;
-  border-top-right-radius: 15rem;
+  background-color: rgb(225,247,85,.57);
   position: relative;
 }
 #gallery-subtitle{

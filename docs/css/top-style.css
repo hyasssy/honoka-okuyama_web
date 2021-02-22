@@ -204,20 +204,9 @@
   }
 }
 
-@media screen and (min-width: 480px) {
-  /*タブレットサイズ以降*/
-  .cv-contents {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-  .name {
-    font-size: 1.5rem;
-  }
+@media screen and (max-width: 896px) {
+  /*タブレット以下スマホ以上*/
 }
-@media screen and (min-width: 896px) {
-  /*PCサイズ以降*/
-  .cv-contents {
-    margin-left: 25%;
-    margin-right: 25%;
-  }
+@media screen and (max-width: 480px) {
+  /*スマホ*/
 }

@@ -101,6 +101,7 @@ a:active {
 }
 #nav-title a {
   width: 100%;
+  /* background-color: red; */
   font-family: "Karakaze";
   font-size: 6rem;
   white-space: nowrap;
@@ -161,9 +162,18 @@ a:active {
   color: var(--baseblack);
 }
 
-@media screen and (min-width: 480px) {
-  /*タブレットサイズ以上*/
+@media only screen and (orientation:portrait){
+
 }
-@media screen and (min-width: 896px) {
-  /*pcサイズ以上*/
+@media screen and (max-width: 896px) {
+  /*タブレット以下スマホ以上*/
+  #nav-title a {
+    font-size: 7vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  /*スマホ*/
+  #nav-title a {
+    font-size: 10vw;
+  }
 }

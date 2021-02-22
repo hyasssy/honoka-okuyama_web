@@ -20,8 +20,8 @@
   height: 100vh;
   width: 100%;
   position: relative;
+  margin-bottom: 5rem;
   /* background-color: violet; */
-  margin-bottom: 10rem;
 }
 .imageframe-wrapper{
   width: 80%;
@@ -71,6 +71,16 @@
   transform-origin: 0 100%;
   transform: rotate(90deg);
 }
+#sns-icons{
+  position: absolute;
+  width: 3.2rem;
+  left: 5.5vw;/*navに合わせて調整*/
+  bottom: 0;/*よう調整*/
+}
+#sns-icons img{
+  width: 100%;
+  margin-top: 1rem;
+}
 
 /* #self-introduction {
   width: 100%;
@@ -84,7 +94,7 @@
 } */
 #cv-wrapper{
   width: 100%;
-  margin-top: 20rem;
+  margin-top: 25rem;
   margin-bottom: 10rem;
 }
 #cv-box{

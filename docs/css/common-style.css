@@ -83,6 +83,7 @@ html {
   font-family: "HelveticaNeue", "HiraKakuGo", sans-serif;/*ニュートラル*/
   font-weight: 200;
   letter-spacing: .1rem;
+  scroll-behavior: smooth;
 }
 html {
   visibility: hidden;
@@ -95,7 +96,7 @@ html.loading-delay {
   width: 0.5rem;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--nightnavy);
   border-radius: 1rem;
 }
 
@@ -139,13 +140,14 @@ a:active {
   padding-left: 1vw;
 }
 #nav-list a {
-  display: block;
+  display: inline-block;
   font-family: "Moon";
   font-size: 2.7rem;
   white-space: nowrap;
   letter-spacing: 0.3vw;
   color: var(--baseblack);
   margin-bottom: 1vh;
+  width: auto;
 }
 
 

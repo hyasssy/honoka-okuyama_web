@@ -39,12 +39,13 @@
   --baseblack: rgb(84, 89, 90);
   --baselink: rgb(66, 115, 223);
   --basehoverblue: rgb(143, 183, 193);
+  --bloodyred: rgb(108, 16, 36); /* 白樺の木の皮をひっぺがした時に出るような赤黒い茶色、あるいは血の色 */
   --neutralgray: rgb(140, 140, 140);
   --snowwhite: rgb(235, 241, 249);
   --forestwhite: rgb(227, 236, 240);
-  --nightnavy: rgb(41, 62, 133);
-  --lemonyellow: rgb(246, 255, 77);
-  --grassgreen: rgb(192, 247, 147);
+  --nightnavy: rgb(41, 62, 133); /* 北の森の夜のような静かで少し怖い紺 */
+  --lemonyellow: rgb(246, 255, 77); /* レモンみたいに元気な黄色 */
+  --grassgreen: rgb(192, 247, 147); /* ようやく雪が溶けた春の日の森の瑞々しい下草 */
 }
 body,
 html {
@@ -82,7 +83,7 @@ a:visited {
 }
 a:hover,
 a:active {
-  color: var(--basehoverblue);
+  color: var(--bloodyred);
 }
 
 

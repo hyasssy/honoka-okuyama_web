@@ -100,7 +100,7 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(47, 53, 57, 0.6);
   height: 100vh;
   width: 100%;
 }
@@ -113,37 +113,63 @@
   height: 90vh;
   overflow: scroll;
   overflow-y: overlay; /*スクロールバーをオーバーレイする。webkit対応ブラウザのみ*/
-  scrollbar-width: thin;/*細さ*/
-  scrollbar-color: #000000 #ffffff;/*つまみの色 軌道の色*/
-}
-.modal-content .closebutton img {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  right: calc(10% + 10px);
-  bottom: calc(5% + 10px);
-  z-index: 50000;
 }
 .js-modal-open{
   cursor: pointer;
-}
-.js-modal-close a#closebutton-link img {
-  position: fixed;
-  width: 30px;
-  height: auto;
-  padding: 1.6rem;
 }
 
 .showbox {
   width: 100%;
   height: 100%;
-  background-color: red;
+  text-align: center;
+  /* background-color: red; */
 }
+.showbox img{
+  max-width: 100%;
+  max-height: 90%;
+}
+.showtextbox{
+  width: 35%;
+  margin-left: 60%;
+  margin-top: 0.6rem;
+  /* background-color: red; */
+  text-align: left;
+}
+.m-caption{/*モーダルウィンドウキャプション*/
+  font-family: mr-eaves-modern, "Yumin", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.workbox {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /* background-color: red; */
+}
+.workbox img{
+  max-width: 100%;
+  max-height: 90%;
+}
+.worktextbox{
+  width: 35%;
+  margin-left: 60%;
+  margin-top: 0.6rem;
+  /* background-color: red; */
+  text-align: left;
+}
+
 
 @media screen and (max-width: 896px) {
   /*タブレット以下スマホ以上*/
 }
 @media screen and (max-width: 480px) {
   /*スマホ*/
+  .modal-content {
+    left: 1rem;
+    width: calc(100vw - 2rem);
+    top: 1rem;
+    height: 80vh;
+  }
 }
 

@@ -34,32 +34,32 @@ let _data = {
         },
         {
             flag: false,
-            img: "",
-            description: "",
-            caption: "",
-            tag: "",
-            m_image: "",
-            m_title: ""
+            img: "./imgs/img1.jpeg",
+            description: "画像の説明 展示の名前",
+            caption: "caption",
+            tag: "title",
+            m_image: "./imgs/img1.jpeg",
+            m_title: "タイトルSample"
         }
     ],
     works: [
         {
             flag: false,
-            img: "",
-            description: "",
-            caption: "",
-            tag: "",
-            m_image: "",
-            m_title: ""
+            img: "./imgs/img1.jpeg",
+            description: "画像の説明 展示の名前",
+            caption: "caption",
+            tag: "title",
+            m_image: "./imgs/img1.jpeg",
+            m_title: "タイトルSample"
         },
         {
             flag: false,
-            img: "",
-            description: "",
-            caption: "",
-            tag: "",
-            m_image: "",
-            m_title: ""
+            img: "./imgs/img1.jpeg",
+            description: "画像の説明 展示の名前",
+            caption: "caption",
+            tag: "title",
+            m_image: "./imgs/img1.jpeg",
+            m_title: "タイトルSample"
         }
     ]
 };
@@ -96,12 +96,36 @@ function WorksThumbnails(target) {
     }
 }
 
-function ShowInfo() {
+function ShowInfo(data) {
     var root = document.createElement("div");
-    root.className = "showbox"
+    root.className = "showbox";
     var img = document.createElement("img");
-    img.src = ""
+    img.src = data.m_image;
     root.appendChild(img);
+    var textbox = document.createElement("div");
+    textbox.className = "showtextbox";
+    var div = document.createElement("div");
+    div.className = "m-caption";
+    div.textContent = data.m_title;
+    textbox.appendChild(div);
+    root.appendChild(textbox);
+    var textbox = document.createElement("div");
+    return root;
+}
+function WorkInfo(data) {
+    var root = document.createElement("div");
+    root.className = "workbox";
+    var img = document.createElement("img");
+    img.src = data.m_image;
+    root.appendChild(img);
+    var textbox = document.createElement("div");
+    textbox.className = "worktextbox";
+    var div = document.createElement("div");
+    div.className = "m-caption";
+    div.textContent = data.m_title;
+    textbox.appendChild(div);
+    root.appendChild(textbox);
+    var textbox = document.createElement("div");
     return root;
 }
 function ModalWindow(data, target) {
@@ -113,17 +137,7 @@ function ModalWindow(data, target) {
     root.appendChild(div);
     var parent = document.createElement("div");
     parent.className = "modal-content";
-    parent.appendChild(ShowInfo());
-    var div = document.createElement("div");
-    div.className = "closebutton";
-    var a = document.createElement("a");
-    a.className = "js-modal-close";
-    a.id = "closebutton-link";
-    var img = document.createElement("img");
-    img.src = "./imgs/closebutton.svg";
-    a.appendChild(img);
-    div.appendChild(a);
-    parent.appendChild(div);
+    parent.appendChild(ShowInfo(data));
     root.appendChild(parent);
     target.appendChild(root);
 }

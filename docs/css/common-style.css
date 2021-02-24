@@ -43,9 +43,10 @@
   --neutralgray: rgb(140, 140, 140);
   --snowwhite: rgb(235, 241, 249);
   --forestwhite: rgb(227, 236, 240);
-  --nightnavy: rgb(41, 62, 133); /* 北の森の夜のような静かで少し怖い紺 */
+  --nightnavy: rgb(96, 110, 167); /* 北の森の夜のような静かで少し怖い紺 */
+  --nightnavy2: rgb(41, 62, 133); /*デフォこっち。濃すぎて見えづらかったので明るくした*/
   --lemonyellow: rgb(246, 255, 77); /* レモンみたいに元気な黄色 */
-  --grassgreen: rgb(192, 247, 147); /* ようやく雪が溶けた春の日の森の瑞々しい下草 */
+  --grassgreen: rgb(204, 224, 75); /* ようやく雪が溶けた春の日の森の瑞々しい下草 */
 }
 body,
 html {
@@ -68,22 +69,25 @@ html {
   width: 0.5rem;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--nightnavy);
+  background: var(--nightnavy2);
   border-radius: 1rem;
 }
 
+/*カラースキームは調整*/
 a {
   text-decoration: none;
   transition: 0.3s;
-  color: var(--nightnavy);
+  color: var(--nightnavy2);
+  cursor: url(../imgs/icon/pointer.png), pointer;
 }
 a:link,
 a:visited {
-  color: var(--nightnavy);
+  color: var(--nightnavy2);
 }
 a:hover,
 a:active {
   color: var(--bloodyred);
+  transform: scale(1.1,1.1);
 }
 
 
@@ -138,7 +142,7 @@ a:active {
   transform-origin: 50% 50%;
 }
 #nav-list a:hover::after{
-  width: 120%;    /*hover時に100%で広がる*/
+  width: 120%;    /*hover時に120%まで広がる*/
 
 }
 
@@ -148,7 +152,6 @@ a:active {
 
 #copyright {
   border-top: solid 0.5px var(--nightnavy);
-  opacity: .6;
   /* background-color: var(--lemonyellow); */
   padding-top: 7rem;
   padding-bottom: 7rem;

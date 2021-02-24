@@ -177,22 +177,40 @@
   top: -7.2rem;
   left: -4.6rem;
 }
+#contact-box a div{
+  display: inline-block;
+  vertical-align: middle;
+  /* background-color: red; */
+}
+#contact-mail{
+  /* background-color: red; */
+  border-bottom: solid 1px var(--nightnavy);
+  transition: 0.3s;
+}
+#contact-box a:hover #contact-mail{
+  border-bottom: solid 1px var(--bloodyred);
+  /* background-color: red; */
+}
+#contact-mailicon img{
+  width: 3.2rem;
+  height: auto;
+}
 
 
 
-.down-arrow img {
+/* .down-arrow img {
   position: absolute;
   bottom: -3rem;
   width: 3.5rem;
-  opacity: 0.9;
+  opacity: 0.9; */
 
   /*上下アニメーション*/
-  animation-name: float-arrow;
+  /* animation-name: float-arrow;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-duration: 0.75s;
-}
+} */
 
 @keyframes float-arrow {
   /*矢印アニメーション*/

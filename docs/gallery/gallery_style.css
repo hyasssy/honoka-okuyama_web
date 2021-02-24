@@ -115,7 +115,7 @@
   overflow-y: overlay; /*スクロールバーをオーバーレイする。webkit対応ブラウザのみ*/
 }
 .js-modal-open{
-  cursor: pointer;
+  cursor: url(../imgs/icon/pointer.png), pointer;
 }
 
 .showbox {

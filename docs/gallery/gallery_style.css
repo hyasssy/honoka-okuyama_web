@@ -1,9 +1,9 @@
 /*css of news page*/
-#top{
+#top {
   width: 100%;
-  height: 1px;/*高さがないとリンクできないから応急処置*/
+  height: 1px; /*高さがないとリンクできないから応急処置*/
 }
-#gallery-wrapper{
+#gallery-wrapper {
   width: 65%;
   margin-left: 30%;
   margin-top: 23rem;
@@ -11,85 +11,82 @@
   /* background-color: rgb(225,247,85,.57); */
   position: relative;
 }
-#gallery-header{
+#gallery-header {
   font-size: 4rem;
   line-height: 4rem;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   font-family: "Moon";
   position: absolute;
   top: -5.7rem;
   left: -4.6rem;
 }
-#gallery-headbox{
-  border-left: solid 0.5px var(--nightnavy);
+#gallery-headbox {
+  border-left: solid 0.5px var(--nightnavy2);
   width: 100%;
   height: 5rem;
   /* background-color: rgba(247, 123, 85, 0.57); */
 }
-.gallery-box{
+.gallery-box {
   /* max-width: 60rem; */
   /* height: 30rem; temp */
   /* background-color: rgba(247, 123, 85, 0.57); */
-  border-left: solid 0.5px var(--nightnavy);
+  border-left: solid 0.5px var(--nightnavy2);
   padding-top: 5rem;
   padding-left: 6rem;
   padding-bottom: 5rem;
 }
-.gallery-thumbnail{
+.gallery-thumbnail {
   display: inline-block;
   min-width: 10rem;
   width: 10vw;
   margin-right: 5rem;
   margin-bottom: 3rem;
-  /* background-color: red; */
 }
-.gallery-thumbnail img{
+.gallery-thumbnail img {
   width: 100%;
   border-radius: 10rem;
 }
-.gallery-thumcaption{
-  display: inline-block;
+.gallery-thumcaption {
   width: 100%;
+  /* background-color: red; */
   white-space: nowrap;
   text-align: center;
   font-family: mr-eaves-modern, "Yumin", sans-serif;
   font-size: 1.2rem;
   font-weight: 200;
 }
-#gallery-shows, #gallery-works{
+#gallery-shows,
+#gallery-works {
   position: relative;
   height: 2.4rem;
 }
-.gallery-subtitle{
+.gallery-subtitle {
   position: absolute;
   display: inline-block;
   top: -0.5rem;
   left: 6.3rem;
   font-size: 3rem;
   line-height: 3rem;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   font-family: "Moon";
-
 }
-.gallery-subtitleline{
+.gallery-subtitleline {
   position: absolute;
   top: 1.2rem;
   left: 1.2rem;
   display: inline-block;
   width: 3rem;
-  border-top: solid 0.5px var(--nightnavy);
+  border-top: solid 0.5px var(--nightnavy2);
 }
 
-
-
 /*モーダルウィンドウ関連*/
-.modal{
+.modal {
   display: none;
   height: 100vh;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;/*ナビよりも上*/
+  z-index: 999; /*ナビよりも上*/
   overflow: hidden;
   /* overflow: scroll; */
 }
@@ -114,8 +111,9 @@
   overflow: scroll;
   overflow-y: overlay; /*スクロールバーをオーバーレイする。webkit対応ブラウザのみ*/
 }
-.js-modal-open{
+.js-modal-open {
   cursor: url(../imgs/icon/pointer.png), pointer;
+  display: inline-block;
 }
 
 .showbox {
@@ -124,18 +122,19 @@
   text-align: center;
   /* background-color: red; */
 }
-.showbox img{
+.showbox img {
   max-width: 100%;
   max-height: 90%;
 }
-.showtextbox{
+.showtextbox {
   width: 35%;
   margin-left: 60%;
   margin-top: 0.6rem;
   /* background-color: red; */
   text-align: left;
 }
-.m-caption{/*モーダルウィンドウキャプション*/
+.m-caption {
+  /*モーダルウィンドウキャプション*/
   font-family: mr-eaves-modern, "Yumin", sans-serif;
   font-size: 1.2rem;
   font-weight: 200;
@@ -147,18 +146,17 @@
   text-align: center;
   /* background-color: red; */
 }
-.workbox img{
+.workbox img {
   max-width: 100%;
   max-height: 90%;
 }
-.worktextbox{
+.worktextbox {
   width: 35%;
   margin-left: 60%;
   margin-top: 0.6rem;
   /* background-color: red; */
   text-align: left;
 }
-
 
 @media screen and (max-width: 896px) {
   /*タブレット以下スマホ以上*/
@@ -172,4 +170,3 @@
     height: 80vh;
   }
 }
-

@@ -9,31 +9,31 @@
   width: calc(100% - 1.2rem);
   height: calc(100% - 5.2rem);
   /*height: -webkit-fill-available - 0.6rem; /*iosのsafariでメニューバーに隠れてしまう問題解決*/
-  /* background-position: center center;
+/* background-position: center center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 } */
 
-#top-wrapper{
+#top-wrapper {
   height: 100vh;
   width: 100%;
   position: relative;
   margin-bottom: 5rem;
   /* background-color: violet; */
 }
-.imageframe-wrapper{
+.imageframe-wrapper {
   width: 80%;
   height: 100%;
   position: absolute;
-  height:100vh;
+  height: 100vh;
   right: 0rem;
   /* bottom: 3rem; */
   align-items: center;
   /* background-color: rgb(255,0,0,.3); */
 }
-.imageframe{
+.imageframe {
   width: calc(100% - 5vw);
   height: 100%;
   position: absolute;
@@ -44,12 +44,12 @@
   /* background-color: var(--snowwhite); */
   /* padding: .5rem; */
 }
-.imageframe img{
+.imageframe img {
   width: 100%;
   max-height: 75%;
   object-fit: cover;
 }
-.img-caption{
+.img-caption {
   position: absolute;
   font-family: mr-eaves-modern, "Yumin", sans-serif;
   font-size: 1.2rem;
@@ -60,24 +60,28 @@
   /* margin-right: -.5rem; */
 }
 
-#shortintroduction{
+#shortintroduction {
   position: absolute;
   /* background-color: var(--nightnavy); */
   font-family: mr-eaves-modern, sans-serif;
   color: var(--baseblack);
   font-size: 1.3rem;
-  left: 3vw;/*navに合わせて調整*/
-  top: 80vh;/*よう調整*/
-  transform-origin: 0 100%;
+  left: 3vw;
+  bottom: 17.8rem;
+  /* top: 80vh; */
+  transform-origin: 0% 100%;
   transform: rotate(90deg);
 }
-#sns-icons{
+#sns-icons {
   position: absolute;
   width: 3.2rem;
-  left: 5.5vw;/*navに合わせて調整*/
-  bottom: 0;/*よう調整*/
+  left: 5.5vw; /*navに合わせて調整*/
+  bottom: 0; /*よう調整*/
 }
-#sns-icons img{
+#sns-icons a {
+  display: block;
+}
+#sns-icons img {
   width: 100%;
   margin-top: 1rem;
 }
@@ -92,12 +96,12 @@
   word-wrap: break-word;
   z-index: 999;
 } */
-#cv-wrapper{
+#cv-wrapper {
   width: 100%;
   margin-top: 25rem;
   margin-bottom: 10rem;
 }
-#cv-box{
+#cv-box {
   width: 50%;
   max-width: 60rem;
   margin-left: 30%;
@@ -108,26 +112,25 @@
   box-shadow: 0 0 1px 1px white inset;
   position: relative;
 }
-#cv-subtitle{
+#cv-subtitle {
   font-size: 4rem;
   line-height: 4rem;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   font-family: "Moon";
   position: absolute;
   top: -7.2rem;
   left: -4.6rem;
-
 }
-#cv-name{
+#cv-name {
   font-size: 1.7rem;
   line-height: 1rem;
   /* font-family: "HelveticaNeue", "HiraKakuGo", sans-serif;
   font-weight: 100; */
   position: absolute;
-  top: -.6rem;
+  top: -0.6rem;
   left: -1.4rem;
 }
-#cv-textbox{
+#cv-textbox {
   /* font-family: "HelveticaNeue", "HiraKakuGo", sans-serif;
   font-weight: 100; */
   font-size: 1.2rem;
@@ -137,66 +140,68 @@
   padding-top: 3rem;
   padding-bottom: 8rem;
 }
-.cv-header{
+.cv-header {
   margin-top: 2.5rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-.cv-line{
+.cv-line {
   display: flex;
   line-height: 1.8rem;
 }
-.cv-year{
+.cv-year {
   margin-right: 2rem;
 }
-.cv-description{
+.cv-description {
 }
-.cv-border{
+.cv-border {
   margin-top: 5rem;
   margin-bottom: 5rem;
   border-bottom: solid 0.4px var(--nightnavy);
-  opacity: .6;
+  opacity: 0.6;
 }
 
-#contact-wrapper{
+#contact-wrapper {
   width: 100%;
   margin-top: 20rem;
   margin-bottom: 10rem;
 }
-#contact-box{
+#contact-box {
   margin-left: 25%;
   position: relative;
   font-family: mr-eaves-modern, sans-serif;
   font-size: 2rem;
 }
-#contact-subtitle{
+#contact-subtitle {
   font-size: 4rem;
   line-height: 4rem;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   font-family: "Moon";
   position: absolute;
   top: -7.2rem;
   left: -4.6rem;
 }
-#contact-box a div{
+#contact-box a {
+  display: block;
+  width: 70%;
+}
+#contact-box a div {
   display: inline-block;
   vertical-align: middle;
   /* background-color: red; */
 }
-#contact-mail{
+#contact-link {
   /* background-color: red; */
   border-bottom: solid 1px var(--nightnavy);
   transition: 0.3s;
 }
-#contact-box a:hover #contact-mail{
+#contact-box a:hover #contact-link {
   border-bottom: solid 1px var(--bloodyred);
   /* background-color: red; */
 }
-#contact-mailicon img{
+#contact-icon img {
   width: 3.2rem;
   height: auto;
 }
-
-
 
 /* .down-arrow img {
   position: absolute;
@@ -204,8 +209,8 @@
   width: 3.5rem;
   opacity: 0.9; */
 
-  /*上下アニメーション*/
-  /* animation-name: float-arrow;
+/*上下アニメーション*/
+/* animation-name: float-arrow;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;

@@ -5,11 +5,6 @@
 }
 @font-face {
   font-family: "HelveticaNeue";
-  src: url(../fonts/HelveticaNeue.ttf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "HelveticaNeue";
   src: url(../fonts/HelveticaNeue-Thin.ttf);
   font-weight: 200;
 }
@@ -19,12 +14,9 @@
   font-weight: 200;
 }
 @font-face {
-  font-family: "Hannari";
-  src: url(../fonts/hannari.otf);
-}
-@font-face {
-  font-family: "Karakaze";
-  src: url(../fonts/karakaze.otf);
+  font-family: "HiraKakuGo";
+  src: url(../fonts/HiraKakuGo_W3.ttc);
+  font-weight: 300;
 }
 @font-face {
   font-family: "Yumin";
@@ -39,14 +31,26 @@
   --baseblack: rgb(84, 89, 90);
   --baselink: rgb(66, 115, 223);
   --basehoverblue: rgb(143, 183, 193);
-  --bloodyred: rgb(108, 16, 36); /* 白樺の木の皮をひっぺがした時に出るような赤黒い茶色、あるいは血の色 */
+  --bloodyred: rgb(
+    108,
+    16,
+    36
+  ); /* 白樺の木の皮をひっぺがした時に出るような赤黒い茶色、あるいは血の色 */
   --neutralgray: rgb(140, 140, 140);
   --snowwhite: rgb(235, 241, 249);
   --forestwhite: rgb(227, 236, 240);
-  --nightnavy: rgb(96, 110, 167); /* 北の森の夜のような静かで少し怖い紺 */
-  --nightnavy2: rgb(41, 62, 133); /*デフォこっち。濃すぎて見えづらかったので明るくした*/
+  --nightnavy: rgb(191, 196, 216); /* 北の森の夜のような静かで少し怖い紺 */
+  --nightnavy2: rgb(
+    81,
+    98,
+    152
+  ); /*デフォこっち。濃すぎて見えづらかったので明るくした*/
   --lemonyellow: rgb(246, 255, 77); /* レモンみたいに元気な黄色 */
-  --grassgreen: rgb(204, 224, 75); /* ようやく雪が溶けた春の日の森の瑞々しい下草 */
+  --grassgreen: rgb(
+    204,
+    224,
+    75
+  ); /* ようやく雪が溶けた春の日の森の瑞々しい下草 */
 }
 body,
 html {
@@ -55,11 +59,10 @@ html {
   height: 100%;
   font-size: 10px;
   color: var(--baseblack);
-  background-color: var(--snowwhite);
   background-color: white;
-  font-family: "HelveticaNeue", "HiraKakuGo", sans-serif;/*ニュートラル*/
-  font-weight: 200;
-  letter-spacing: .1rem;
+  font-family: "HelveticaNeue", "HiraKakuGo", sans-serif; /*ニュートラル*/
+  font-weight: 100;
+  letter-spacing: 0.1rem;
   scroll-behavior: smooth;
 }
 html {
@@ -77,7 +80,7 @@ html {
 a {
   text-decoration: none;
   transition: 0.3s;
-  color: var(--nightnavy2);
+  color: var(--nightnavy);
   cursor: url(../imgs/icon/pointer.png), pointer;
 }
 a:link,
@@ -87,30 +90,30 @@ a:visited {
 a:hover,
 a:active {
   color: var(--bloodyred);
-  transform: scale(1.1,1.1);
+  transform: scale(1.1, 1.1);
 }
 
-
-#wrapper{
+#wrapper {
   width: 100%;
   height: 100vh;
   position: relative;
 }
 #nav-box {
-  z-index: 99;/*手前表示*/
+  z-index: 99; /*手前表示*/
   position: fixed;
-  /* background-color: rgb(255,0,0,.2); */
+  /* background-color: rgb(255, 0, 0, 0.2); */
   top: 0;
-  padding-left: 5vw;
-  padding-top: 5vh;
+  margin-left: 5vw;
+  margin-top: 5vh;
+  width: 0; /*ここは幅なくしちゃって、下の判定奪わないようにする。*/
 }
-#nav-title a {
+#nav-title {
+  width: 90vw;
+  max-width: 40rem;
+  display: block;
+}
+#nav-title img {
   width: 100%;
-  /* background-color: red; */
-  font-family: "Karakaze";
-  font-size: 6rem;
-  white-space: nowrap;
-  color: var(--baseblack);
 }
 #nav-list {
   padding-top: 3vh;
@@ -128,30 +131,25 @@ a:active {
 
   position: relative;
 }
-#nav-list a::after{
-  content:"";
-  width: 0%;    /*最初はwidth:0にする*/
+#nav-list a::after {
+  content: "";
+  width: 0%; /*最初はwidth:0にする*/
   height: 2rem;
   background: var(--lemonyellow);
   position: absolute;
   bottom: -4px;
-  left: .6rem;
+  left: 0.6rem;
   z-index: -1;
-  transition: all .3s;  /*アニメーションの長さ*/
+  transition: all 0.3s; /*アニメーションの長さ*/
   transform: rotate(-8deg);
   transform-origin: 50% 50%;
 }
-#nav-list a:hover::after{
-  width: 120%;    /*hover時に120%まで広がる*/
-
+#nav-list a:hover::after {
+  width: 120%; /*hover時に120%まで広がる*/
 }
 
-
-
-
-
 #copyright {
-  border-top: solid 0.5px var(--nightnavy);
+  border-top: solid 0.5px var(--nightnavy2);
   /* background-color: var(--lemonyellow); */
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -166,18 +164,14 @@ a:active {
   color: var(--baseblack);
 }
 
-@media only screen and (orientation:portrait){
-
+@media only screen and (orientation: portrait) {
 }
 @media screen and (max-width: 896px) {
   /*タブレット以下スマホ以上*/
-  #nav-title a {
-    font-size: 7vw;
-  }
 }
 @media screen and (max-width: 480px) {
   /*スマホ*/
-  #nav-title a {
-    font-size: 10vw;
-  }
+  /* #nav-box {
+    right: 0;
+  } */
 }

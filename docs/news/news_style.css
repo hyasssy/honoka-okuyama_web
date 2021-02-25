@@ -7,15 +7,14 @@
   width: 50%;
   max-width: 55rem;
   margin-left: 30%;
-  margin-top: 30vw;
+  margin-top: 23rem;
   margin-bottom: 10rem;
   /* background-color: red; */
   position: relative;
+  padding-top: 5rem;
 }
 #news-box {
   width: 100%;
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
   border: solid 1px var(--nightnavy);
   position: relative;
   margin-bottom: 14vw;
@@ -26,7 +25,7 @@
   letter-spacing: 0.3rem;
   font-family: "Moon";
   position: absolute;
-  top: -16vw;
+  top: -5.7rem;
   left: -4.6rem;
 }
 .news-heading {
@@ -86,4 +85,17 @@
 }
 @media screen and (max-width: 480px) {
   /*スマホ*/
+  #news-wrapper {
+    width: 85%;
+    margin-left: 7.5%;
+  }
+  #news-subtitle {
+    left: -1.7rem;
+  }
+  .news-heading {
+    font-size: 2.6rem;
+  }
+  .news-subheading {
+    font-size: 1.8rem;
+  }
 }

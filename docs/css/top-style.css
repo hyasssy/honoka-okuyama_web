@@ -170,6 +170,7 @@
   position: relative;
   font-family: mr-eaves-modern, sans-serif;
   font-size: 2rem;
+  white-space: nowrap;
 }
 #contact-subtitle {
   font-size: 4rem;
@@ -232,4 +233,31 @@
 }
 @media screen and (max-width: 480px) {
   /*スマホ*/
+  .imageframe-wrapper {
+    width: 100%;
+  }
+  .imageframe {
+    width: 93%;
+    left: 3.5%;
+    bottom: 29%;
+  }
+  .img-caption {
+    bottom: calc(29% - 1.5rem);
+  }
+  #sns-icons {
+    left: 4rem;
+  }
+  #cv-box {
+    width: 80%;
+    margin-left: 10%;
+  }
+  #cv-subtitle {
+    left: -3rem;
+  }
+  #contact-box {
+    margin-left: 13%;
+  }
+  #contact-subtitle {
+    left: -3rem;
+  }
 }

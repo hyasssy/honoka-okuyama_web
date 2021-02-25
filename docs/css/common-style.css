@@ -171,7 +171,19 @@ a:active {
 }
 @media screen and (max-width: 480px) {
   /*スマホ*/
-  /* #nav-box {
-    right: 0;
-  } */
+  #nav-title {
+    margin-left: -22rem;
+    width: 32rem;
+  }
+  #nav-box {
+    right: 12rem;
+    margin-top: 3rem;
+  }
+  #nav-box a {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  #nav-list {
+    padding-top: 2.7vw;
+  }
 }

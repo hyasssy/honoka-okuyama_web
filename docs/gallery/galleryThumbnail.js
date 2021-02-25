@@ -60,7 +60,18 @@ let _data = {
             tag: "title",
             m_image: "./imgs/img1.jpeg",
             m_title: "タイトルSample"
-        }
+        },
+        {
+            flag: false,
+            img: "./imgs/img1.jpeg",
+            description: "画像の説明 展示の名前",
+            caption: "caption",
+            tag: "title",
+            m_image: "./imgs/img1.jpeg",
+            m_title: "タイトルSample"
+        },
+        
+
     ]
 };
 

@@ -223,20 +223,22 @@
     width: 100%;
   }
   .imageframe {
-    width: 93%;
-    left: 3.5%;
-    bottom: 33%;
+    width: 93vw;
+    left: 3.5vw;
+    bottom: 3.5vw;
   }
   .img-caption {
-    bottom: calc(33% - 1.4rem);
+    bottom: calc(3.5vw - 1.2rem);
     font-size: 1rem;
+    right: 3.5vw;
   }
   #shortintroduction{
     font-size: 1.1rem;
-    bottom: 15.6rem;
+    bottom: calc(70vw + 15.6rem) ;
   }
   #sns-icons {
     left: 3rem;
+    bottom: 70vw;
   }
   #cv-box, #contact-box{
     width: 80%;

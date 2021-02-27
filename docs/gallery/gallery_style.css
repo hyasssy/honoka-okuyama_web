@@ -35,26 +35,6 @@
   padding-left: 6rem;
   padding-bottom: 5rem;
 }
-.gallery-thumbnail {
-  display: inline-block;
-  min-width: 10rem;
-  width: 10vw;
-  margin-right: 5rem;
-  margin-bottom: 3rem;
-}
-.gallery-thumbnail img {
-  width: 100%;
-  border-radius: 10rem;
-}
-.gallery-thumcaption {
-  width: 100%;
-  /* background-color: red; */
-  white-space: nowrap;
-  text-align: center;
-  font-family: mr-eaves-modern, "Yumin", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 200;
-}
 #gallery-shows,
 #gallery-works {
   position: relative;
@@ -77,6 +57,26 @@
   display: inline-block;
   width: 3rem;
   border-top: solid 0.5px var(--nightnavy2);
+}
+.gallery-thumbnail {
+  display: inline-block;
+  min-width: 10rem;
+  width: 10vw;
+  margin-right: 5rem;
+  margin-bottom: 3rem;
+}
+.gallery-thumbnail img {
+  width: 100%;
+  border-radius: 10rem;
+}
+.gallery-thumcaption {
+  width: 100%;
+  /* background-color: red; */
+  white-space: nowrap;
+  text-align: center;
+  font-family: mr-eaves-modern, "Yumin", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
 }
 
 /*モーダルウィンドウ関連*/
@@ -168,15 +168,22 @@
     margin-left: 8%;
   }
   #gallery-header {
-    left: -2.2rem;
+    left: -1.8rem;
+    font-size: 2.7rem;
   }
   .gallery-box {
     padding-left: 1.6rem;
   }
+  .gallery-subtitle{
+    font-size: 2.7rem;
+  }
   .gallery-thumbnail {
     margin-right: 1.3rem;
     margin-bottom: 2rem;
-    min-width: 9rem;
+    min-width: 24vw;
+  }
+  .gallery-thumcaption{
+    color: var(--nightnavy2);
   }
   .modal-content {
     left: 1rem;

@@ -90,12 +90,24 @@
     margin-left: 7.5%;
   }
   #news-subtitle {
-    left: -1.7rem;
+    left: -1.5rem;
+    font-size: 2.7rem;
   }
   .news-heading {
-    font-size: 2.6rem;
+    font-size: 6vw;
   }
-  .news-subheading {
-    font-size: 1.8rem;
+  .news-subheading{
+    font-size: 3.5vw;
+    /* background-color: blue; */
+  }
+  .news-textbox{
+    font-size: 1.1rem;
+  }
+  .news-text{
+    margin-left: 1rem;
+  }
+  .news-smalltext{
+    margin-left: 0;
+    font-size: 0.8rem;
   }
 }

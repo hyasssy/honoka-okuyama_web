@@ -63,7 +63,7 @@ html {
   font-family: "HelveticaNeue", "HiraKakuGo", sans-serif; /*ニュートラル*/
   font-weight: 100;
   letter-spacing: 0.1rem;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 html {
   visibility: hidden;
@@ -149,7 +149,7 @@ a:active {
 }
 
 #copyright {
-  border-top: solid 0.5px var(--nightnavy2);
+  border-top: solid 0.5px var(--nightnavy);
   /* background-color: var(--lemonyellow); */
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -157,7 +157,7 @@ a:active {
   width: 80%;
   margin-left: 10%;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "HelveticaNeue", sans-serif;
   font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 300;
@@ -172,18 +172,21 @@ a:active {
 @media screen and (max-width: 480px) {
   /*スマホ*/
   #nav-title {
-    margin-left: -22rem;
-    width: 32rem;
+    margin-left: -52vw;
+    width: 80vw;
   }
   #nav-box {
     right: 12rem;
-    margin-top: 3rem;
+    margin-top: 4vh;
   }
   #nav-box a {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+    font-size: 5.4vw;
+    margin-bottom: 2vw;
   }
   #nav-list {
     padding-top: 2.7vw;
+  }
+  #copyright {
+    font-size: 0.8rem;
   }
 }

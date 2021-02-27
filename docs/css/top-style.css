@@ -3,21 +3,21 @@
   position: fixed;
   width: 100vw;
   height: 100%;
-}
+} */
 .bg-slider {
   margin: 4.6rem 0 0 0.6rem;
   width: calc(100% - 1.2rem);
   height: calc(100% - 5.2rem);
-  /*height: -webkit-fill-available - 0.6rem; /*iosのsafariでメニューバーに隠れてしまう問題解決*/
-/* background-position: center center;
+  height: -webkit-fill-available - 0.6rem; /*iosのsafariでメニューバーに隠れてしまう問題解決*/
+  background-position: center center;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
 
 #top-wrapper {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
   margin-bottom: 5rem;
@@ -27,7 +27,6 @@
   width: 80%;
   height: 100%;
   position: absolute;
-  height: 100vh;
   right: 0rem;
   /* bottom: 3rem; */
   align-items: center;
@@ -68,7 +67,6 @@
   font-size: 1.3rem;
   left: 3vw;
   bottom: 17.8rem;
-  /* top: 80vh; */
   transform-origin: 0% 100%;
   transform: rotate(90deg);
 }
@@ -80,22 +78,12 @@
 }
 #sns-icons a {
   display: block;
+  margin-top: 1vh;
 }
 #sns-icons img {
   width: 100%;
-  margin-top: 1rem;
 }
 
-/* #self-introduction {
-  width: 100%;
-  height: 100%;
-  color: rgb(252, 253, 252);
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  font-size: 30px;
-  word-wrap: break-word;
-  z-index: 999;
-} */
 #cv-wrapper {
   width: 100%;
   margin-top: 25rem;
@@ -107,7 +95,6 @@
   margin-left: 30%;
   /* background-color: rgb(225,247,85,.57); */
   background-image: url(../imgs/woodsurface.svg);
-  /* background-repeat: no-repeat; */
   background-size: cover;
   box-shadow: 0 0 1px 1px white inset;
   position: relative;
@@ -124,15 +111,11 @@
 #cv-name {
   font-size: 1.7rem;
   line-height: 1rem;
-  /* font-family: "HelveticaNeue", "HiraKakuGo", sans-serif;
-  font-weight: 100; */
   position: absolute;
   top: -0.6rem;
   left: -1.4rem;
 }
 #cv-textbox {
-  /* font-family: "HelveticaNeue", "HiraKakuGo", sans-serif;
-  font-weight: 100; */
   font-size: 1.2rem;
   /* background-color: rgb(255,0,0,.3); */
   width: 92%;
@@ -170,6 +153,8 @@
   position: relative;
   font-family: mr-eaves-modern, sans-serif;
   font-size: 2rem;
+  /* background-color: red; */
+  line-height: 1rem;
   white-space: nowrap;
 }
 #contact-subtitle {
@@ -184,11 +169,12 @@
 #contact-box a {
   display: block;
   width: 70%;
+  line-height: 2rem;
+  /* background-color: blue; */
 }
 #contact-box a div {
   display: inline-block;
   vertical-align: middle;
-  /* background-color: red; */
 }
 #contact-link {
   /* background-color: red; */
@@ -239,25 +225,37 @@
   .imageframe {
     width: 93%;
     left: 3.5%;
-    bottom: 29%;
+    bottom: 33%;
   }
   .img-caption {
-    bottom: calc(29% - 1.5rem);
+    bottom: calc(33% - 1.4rem);
+    font-size: 1rem;
+  }
+  #shortintroduction{
+    font-size: 1.1rem;
+    bottom: 15.6rem;
   }
   #sns-icons {
-    left: 4rem;
+    left: 3rem;
   }
-  #cv-box {
+  #cv-box, #contact-box{
     width: 80%;
     margin-left: 10%;
   }
-  #cv-subtitle {
-    left: -3rem;
+  #cv-subtitle, #contact-subtitle {
+    left: -2.4rem;
+    font-size: 2.7rem;
   }
-  #contact-box {
-    margin-left: 13%;
+  #cv-name{
+    font-size: 1.5rem;
   }
-  #contact-subtitle {
-    left: -3rem;
+  #cv-textbox{
+    font-size: 1.1rem;
+  }
+  .cv-line{
+    line-height: 1.6rem;
+  }
+  #contact-box{
+    font-size: 1.5rem;
   }
 }

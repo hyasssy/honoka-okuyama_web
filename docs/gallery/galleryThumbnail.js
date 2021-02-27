@@ -23,24 +23,70 @@ window.onload = function () {
 //データオブジェクト
 let _data = {
     shows: [
-        {
+        {//2020
             flag: false,
-            img: "./imgs/img1.jpeg",
-            description: "画像の説明 展示の名前",
-            caption: "caption",
+            img: "./imgs/thumbnail/2020/t-s1.jpg",
+            description: "JINEN　個展",//画像の説明、展示の名前
+            caption: "JINEN gallery",
             tag: "title",
-            m_image: "./imgs/img1.jpeg",
-            m_title: "タイトルSample"
+            m_image: "./imgs/shows/2020/20-s1.jpg",
+            m_title: "JINEN gallery個展風景-1",
         },
         {
             flag: false,
-            img: "./imgs/img1.jpeg",
-            description: "画像の説明 展示の名前",
-            caption: "caption",
+            img: "./imgs/thumbnail/2020/t-s2.jpg",
+            description: "MAKII MASARU FINE ARTS展示風景_2 ",
+            caption: "MAKII MASARU FINE ARTS",
             tag: "title",
-            m_image: "./imgs/img1.jpeg",
-            m_title: "タイトルSample"
-        }
+            m_image: "./imgs/shows/2020/20-s4.jpg",
+            m_title: "MAKII MASARU FINE ARTS展示風景-2",
+        },
+        {
+            flag: false,
+            img: "./imgs/thumbnail/2020/t-s3.jpg",
+            description: "ヨロコビto個展展示風景",
+            caption: "ヨロコビto個展",
+            tag: "title",
+            m_image: "./imgs/shows/2020/20-s5.jpg",
+            m_title: "ヨロコビto個展展示風景",
+        },
+        {//2019
+            flag: false,
+            img: "./imgs/thumbnail/2019/t-s1.jpg",
+            description: "藝祭 geisai",
+            caption: "藝祭 geisai",
+            tag: "title",
+            m_image: "./imgs/shows/2019/19-s1.jpg",
+            m_title: "藝祭 geisai 2019",
+        },
+        {
+            flag: false,
+            img: "./imgs/thumbnail/2019/t-s2.jpg",
+            description: "二人展　hutariten",
+            caption: "二人展　hutariten",
+            tag: "title",
+            m_image: "./imgs/shows/2019/19-s4.jpg",
+            m_title: "二人展 展示風景",
+        },
+        {
+            flag: false,
+            img: "./imgs/thumbnail/2019/t-s3.jpg",
+            description: "卒展内部",
+            caption: "卒業制作学内展",
+            tag: "title",
+            m_image: "./imgs/shows/2019/19-s6.jpg",
+            m_title: "東京芸術大学油画専攻卒業制作学内展",
+        },
+        {
+            flag: false,
+            img: "./imgs/thumbnail/2019/t-s4.jpg",
+            description: "ヨロコビto個展展示風景",
+            caption: "東京芸術大学油画専攻卒業制作展　東京都美術館",
+            tag: "title",
+            m_image: "./imgs/shows/2019/19-s7.jpg",
+            m_title: "東京芸術大学油画専攻卒業制作展　東京都美術館",
+        },
+
     ],
     works: [
         {
@@ -50,7 +96,7 @@ let _data = {
             caption: "caption",
             tag: "title",
             m_image: "./imgs/img1.jpeg",
-            m_title: "タイトルSample"
+            m_title: "タイトルSample",
         },
         {
             flag: false,
@@ -59,7 +105,7 @@ let _data = {
             caption: "caption",
             tag: "title",
             m_image: "./imgs/img1.jpeg",
-            m_title: "タイトルSample"
+            m_title: "タイトルSample",
         },
         {
             flag: false,
@@ -68,10 +114,8 @@ let _data = {
             caption: "caption",
             tag: "title",
             m_image: "./imgs/img1.jpeg",
-            m_title: "タイトルSample"
+            m_title: "タイトルSample",
         },
-        
-
     ]
 };
 

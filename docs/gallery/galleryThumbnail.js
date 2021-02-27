@@ -4,7 +4,8 @@ window.onload = function () {
         $(this).on('click', function () {
             var target = $(this).data('target');
             var modal = document.getElementById(target);
-            // ArtistPage(_data[target]);
+            ModalContent(checkKey(target), modal)
+
             // メモ
             // https://imasashi.net/modal-window_bg-fixed.html
             $(modal).fadeIn();
@@ -19,11 +20,18 @@ window.onload = function () {
         return false;
     });
 }
+function checkKey(tag) {
+    if (tag in _data.shows) {
+        return _data.shows[tag];
+    } else {
+        return _data.works[tag];
+    }
+}
 
 //データオブジェクト
 let _data = {
-    shows: [
-        {//2020
+    shows: {
+        show1: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-s1.jpg",
             description: "JINEN　個展",//画像の説明、展示の名前
@@ -32,7 +40,7 @@ let _data = {
             m_image: "./imgs/shows/2020/20-s1.jpg",
             m_title: "JINEN gallery | 2020",//モーダルで右端に出る文字
         },
-        {
+        show2: {
             flag: false,
             img: "./imgs/thumbnail/2020/t-s2.jpg",
             description: "MAKII MASARU FINE ARTS展示風景_2 ",
@@ -41,7 +49,7 @@ let _data = {
             m_image: "./imgs/shows/2020/20-s4.jpg",
             m_title: "MAKII MASARU FINE ARTS | 2020",
         },
-        {
+        show3: {
             flag: false,
             img: "./imgs/thumbnail/2020/t-s3.jpg",
             description: "ヨロコビto個展展示風景",
@@ -50,7 +58,7 @@ let _data = {
             m_image: "./imgs/shows/2020/20-s5.jpg",
             m_title: "ヨロコビto個展 | 2020",
         },
-        {//2019
+        show4: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-s1.jpg",
             description: "藝祭 geisai",
@@ -59,7 +67,7 @@ let _data = {
             m_image: "./imgs/shows/2019/19-s1.jpg",
             m_title: "藝祭 | geisai | 2019",
         },
-        {
+        show5: {
             flag: false,
             img: "./imgs/thumbnail/2019/t-s2.jpg",
             description: "二人展　hutariten",
@@ -68,7 +76,7 @@ let _data = {
             m_image: "./imgs/shows/2019/19-s4.jpg",
             m_title: "二人展 | hutariten | 2019",
         },
-        {
+        show6: {
             flag: false,
             img: "./imgs/thumbnail/2019/t-s3.jpg",
             description: "卒展内部",
@@ -77,7 +85,7 @@ let _data = {
             m_image: "./imgs/shows/2019/19-s6.jpg",
             m_title: "東京芸術大学油画専攻卒業制作学内展 | 2019",
         },
-        {
+        show7: {
             flag: false,
             img: "./imgs/thumbnail/2019/t-s4.jpg",
             description: "ヨロコビto個展展示風景",
@@ -87,9 +95,9 @@ let _data = {
             m_title: "東京芸術大学油画専攻卒業制作展　| 東京都美術館 | 2019",
         },
 
-    ],
-    works: [
-        {//2020
+    },
+    works: {
+        works1: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w1.jpg",
             description: "美瑛2020_1",
@@ -98,7 +106,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w20.jpg",
             m_title: "美瑛 | Biei  1 | 2020",
         },
-        {//2020
+        works2: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w2.jpg",
             description: "美瑛2020_2",
@@ -107,7 +115,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w21.jpg",
             m_title: "美瑛 | Biei  2 | 2020",
         },
-        {//2020
+        works3: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w3.jpg",
             description: "Tree2020",
@@ -116,7 +124,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w5.jpg",
             m_title: "Tree | 2020",
         },
-        {//2020
+        works4: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w4.jpg",
             description: "室咲2020_1",
@@ -125,7 +133,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w8.jpg",
             m_title: "室咲 | Murozaki  1 | 2020",
         },
-        {//2020
+        works5: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w5.jpg",
             description: "室咲2020_2",
@@ -134,7 +142,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w9.jpg",
             m_title: "室咲 | Murozaki  2 | 2020",
         },
-        {//2020
+        works6: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w6.jpg",
             description: "秋の暮2020",
@@ -143,7 +151,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w10.jpg",
             m_title: "秋の暮  |  Aki no kure | 2020",
         },
-        {//2020
+        works7: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w7.jpg",
             description: "秋霜2020_1",
@@ -152,7 +160,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w11.jpg",
             m_title: "秋霜 | Syuso | 2020",
         },
-        {//2020
+        works8: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w8.jpg",
             description: "秋模様2020_",
@@ -161,7 +169,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w12.jpg",
             m_title: "秋模様 | Akimoyou | 2020",
         },
-        {//2020
+        works9: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w9.jpg",
             description: "秋麗2020_1",
@@ -170,7 +178,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w13.jpg",
             m_title: "秋麗 | Syurei | 2020",
         },
-        {//2020
+        works10: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w10.jpg",
             description: "水の風2020_1",
@@ -179,7 +187,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w14.jpg",
             m_title: "水の風 | Mizu no kaze | 2020",
         },
-        {//2020
+        works11: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w11.jpg",
             description: "青の風2020_1",
@@ -188,7 +196,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w15.jpg",
             m_title: "青の風 | Ao no kaze | 2020",
         },
-        {//2020
+        works12: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w12.jpg",
             description: "霜夜2020_1",
@@ -197,7 +205,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w16.jpg",
             m_title: "霜夜 | Shimoyo | 2020",
         },
-        {//2020
+        works14: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w14.jpg",
             description: "美唄 | Bibai",
@@ -206,7 +214,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w18.jpg",
             m_title: "美唄 | Bibai  1 | 2020",
         },
-        {//2020
+        works15: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w13.jpg",
             description: "美唄2 2020_2",
@@ -215,7 +223,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w17.jpg",
             m_title: "美唄 | Bibai  2 | 2020",
         },
-        {//2020
+        works16: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w15.jpg",
             description: "美唄の山道から2020_1",
@@ -224,7 +232,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w19.jpg",
             m_title: "美唄の山道から | Bibai no sandoukara | 2020",
         },
-        {//2020
+        works17: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w17.jpg",
             description: "六月風2020_1",
@@ -233,7 +241,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w23.jpg",
             m_title: "六月風 | Rokugatukaze | 2020",
         },
-        {//2019
+        works18: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w1.jpg",
             description: "Cafe2019",
@@ -242,7 +250,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w1.jpg",
             m_title: "Cafe | 2019",
         },
-        {//2019
+        works19: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w2.jpg",
             description: "Park2019",
@@ -251,7 +259,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w2.jpg",
             m_title: "Park  1 | 2019",
         },
-        {//2019
+        works20: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w3.jpg",
             description: "Park2019_2",
@@ -260,7 +268,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w3.jpg",
             m_title: "Park  2 | 2019",
         },
-        {//2019
+        works21: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w4.jpg",
             description: "TheSongofTrees12019_1",
@@ -269,7 +277,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w4.jpg",
             m_title: "The Song of Trees 1 | 2019",
         },
-        {//2019
+        works22: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w5.jpg",
             description: "Tree2019",
@@ -278,7 +286,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w5.jpg",
             m_title: "Tree 1 | 2019",
         },
-        {//2019
+        works23: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w6.jpg",
             description: "Tree2019_2",
@@ -287,7 +295,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w6.jpg",
             m_title: "Tree  2 | 2019",
         },
-        {//2019
+        works24: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w7.jpg",
             description: "自画像2019_1",
@@ -296,7 +304,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w7.jpg",
             m_title: "自画像 | Self-portrait | 2019",
         },
-        {//2019
+        works25: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w8.jpg",
             description: "夜ニ寄添2019_1",
@@ -305,7 +313,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w8.jpg",
             m_title: "夜ニ寄添 | Yoru ni yorisou | 2019",
         },
-        {//2019
+        works26: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w9.jpg",
             description: "夜ニ寄添2019_2",
@@ -314,7 +322,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w9.jpg",
             m_title: "夜ニ寄添 | Yoru ni yorisou | 2019",
         },
-        {//2019
+        works27: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w10.jpg",
             description: "夜ニ寄添2019_3",
@@ -323,7 +331,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w10.jpg",
             m_title: "夜ニ寄添 | Yoru ni yorisou | 2019",
         },
-        {//2019
+        works28: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w11.jpg",
             description: "夜ニ寄添2019_4",
@@ -332,7 +340,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w11.jpg",
             m_title: "夜ニ寄添 | Yoru ni yorisou | 2019",
         },
-        {//2019
+        works29: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w12.jpg",
             description: "夜ニ寄添2019_5",
@@ -341,7 +349,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w12.jpg",
             m_title: "夜ニ寄添 | Yoru ni yorisou | 2019",
         },
-        {//2019
+        works30: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w13.jpg",
             description: "夜ニ寄添2019_6",
@@ -350,7 +358,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w13.jpg",
             m_title: "夜ニ寄添 | Yoru ni yorisou | 2019",
         },
-        {//2019
+        works31: {//2019
             flag: false,
             img: "./imgs/thumbnail/2019/t-w14.jpg",
             description: "夜ニ寄添2019_7",
@@ -359,13 +367,7 @@ let _data = {
             m_image: "./imgs/works/2019/19-w14.jpg",
             m_title: "夜ニ寄添 | Yoru ni yorisou | 2019",
         },
-
-
-
-
-
-
-    ]
+    }
 };
 
 function Thumbnail(data, target) {
@@ -387,20 +389,25 @@ function Thumbnail(data, target) {
 }
 
 function ShowsThumbnails(target) {
-    var showscount = _data.shows.length;
-    for (let i = 0; i < showscount; i++) {
-        Thumbnail(_data.shows[i], target);
-    }
+    Object.keys(_data.shows).forEach(function (key) {
+        // var val = this[key];
+        Thumbnail(_data.shows[key], target);
+    }, _data.shows);
 }
 
 function WorksThumbnails(target) {
-    var workscount = _data.works.length;
-    for (let i = 0; i < workscount; i++) {
-        Thumbnail(_data.works[i], target);
-    }
+    Object.keys(_data.works).forEach(function (key) {
+        // var val = this[key];
+        Thumbnail(_data.works[key], target);
+    }, _data.works);
 }
 
-function ShowInfo(data) {
+function ModalContent(data, target) {
+    if (data.flag) {
+        return;
+    } else {
+        data.flag = true;
+    }
     var root = document.createElement("div");
     root.className = "showbox";
     var img = document.createElement("img");
@@ -413,10 +420,13 @@ function ShowInfo(data) {
     div.textContent = data.m_title;
     textbox.appendChild(div);
     root.appendChild(textbox);
-    var textbox = document.createElement("div");
-    return root;
+
+    var parent = document.createElement("div");
+    parent.className = "modal-content";
+    parent.appendChild(root);
+    target.appendChild(parent);
 }
-function WorkInfo(data) {
+/*function WorkInfo(data) {
     var root = document.createElement("div");
     root.className = "workbox";
     var img = document.createElement("img");
@@ -431,7 +441,7 @@ function WorkInfo(data) {
     root.appendChild(textbox);
     var textbox = document.createElement("div");
     return root;
-}
+}*/
 function ModalWindow(data, target) {
     var root = document.createElement("div");
     root.id = data.tag;
@@ -439,21 +449,15 @@ function ModalWindow(data, target) {
     var div = document.createElement("div");
     div.className = "modal-bg js-modal-close";
     root.appendChild(div);
-    var parent = document.createElement("div");
-    parent.className = "modal-content";
-    parent.appendChild(ShowInfo(data));
-    root.appendChild(parent);
     target.appendChild(root);
 }
 function ShowsModalWindows(target) {
-    var showscount = _data.shows.length;
-    for (let i = 0; i < showscount; i++) {
-        ModalWindow(_data.shows[i], target);
-    }
+    Object.keys(_data.shows).forEach(function (key) {
+        ModalWindow(_data.shows[key], target);
+    }, _data.shows);
 }
 function WorksModalWindows(target) {
-    var workscount = _data.works.length;
-    for (let i = 0; i < workscount; i++) {
-        ModalWindow(_data.works[i], target);
-    }
+    Object.keys(_data.works).forEach(function (key) {
+        ModalWindow(_data.works[key], target);
+    }, _data.works);
 }

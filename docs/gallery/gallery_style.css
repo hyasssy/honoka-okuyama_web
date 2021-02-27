@@ -108,9 +108,11 @@
   position: relative;
   top: 5%;
   width: 80%;
-  height: 90vh;
+  height: auto;
+  max-height: 90vh;
   overflow: scroll;
   overflow-y: overlay; /*スクロールバーをオーバーレイする。webkit対応ブラウザのみ*/
+
 }
 .js-modal-open {
   cursor: url(../imgs/icon/pointer.png), pointer;
@@ -139,6 +141,7 @@
   font-family: mr-eaves-modern, "Yumin", sans-serif;
   font-size: 1.2rem;
   font-weight: 200;
+  margin-bottom: 3rem;
 }
 
 .workbox {
@@ -161,6 +164,9 @@
 
 @media screen and (max-width: 896px) {
   /*タブレット以下スマホ以上*/
+  .gallery-thumbnail{
+    margin-right: 3rem;
+  }
 }
 @media screen and (max-width: 480px) {
   /*スマホ*/
@@ -179,9 +185,9 @@
     font-size: 2.7rem;
   }
   .gallery-thumbnail {
-    margin-right: 2rem;
+    margin-right: 1.6rem;
     margin-bottom: 3rem;
-    min-width: 24vw;
+    min-width: 23vw;
   }
   .gallery-thumcaption{
     color: var(--nightnavy2);
@@ -190,9 +196,5 @@
     left: 1rem;
     width: calc(100vw - 2rem);
     top: 3rem;
-    height: auto;
-  }
-  .m-caption{
-    margin-bottom: 3rem;
   }
 }

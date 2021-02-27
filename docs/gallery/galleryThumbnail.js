@@ -36,7 +36,7 @@ let _data = {
             flag: false,
             img: "./imgs/thumbnail/2020/t-s2.jpg",
             description: "MAKII MASARU FINE ARTS展示風景_2 ",
-            caption: "MAKII MASARU FINE ARTS",
+            caption: "MAKII MASARU",
             tag: "show2",
             m_image: "./imgs/shows/2020/20-s4.jpg",
             m_title: "MAKII MASARU FINE ARTS | 2020",
@@ -134,7 +134,7 @@ let _data = {
             m_image: "./imgs/works/2020/20-w9.jpg",
             m_title: "室咲 | Murozaki  2 | 2020",
         },
-         {//2020
+        {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-w6.jpg",
             description: "秋の暮2020",
@@ -203,7 +203,7 @@ let _data = {
             description: "美唄 | Bibai",
             caption: "美唄",
             tag: "works14",
-            m_image: "./imgs/works2020/20-w18.jpg",
+            m_image: "./imgs/works/2020/20-w18.jpg",
             m_title: "美唄 | Bibai  1 | 2020",
         },
         {//2020
@@ -212,7 +212,7 @@ let _data = {
             description: "美唄2 2020_2",
             caption: "美唄",
             tag: "works13",
-            m_image: "./imgs/works2020/20-w17.jpg",
+            m_image: "./imgs/works/2020/20-w17.jpg",
             m_title: "美唄 | Bibai  2 | 2020",
         },
         {//2020

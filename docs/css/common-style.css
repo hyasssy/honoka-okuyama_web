@@ -20,7 +20,7 @@
 }
 @font-face {
   font-family: "Yumin";
-  src: url(../fonts/Yumin_Light_subset.woff), url(../fonts/Yumin_Light_subset.eot);
+  src: url(../fonts/Yumin_Light_subset.ttf);
   font-weight: 300;
 }
 

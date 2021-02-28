@@ -39,7 +39,7 @@ let _data = {
             caption: "JINEN gallery",
             tag: "show1",
             m_image: "./imgs/shows/2020/20-s1.jpg",
-            m_title: "JINEN gallery | 2020",//モーダルで右端に出る文字
+            m_title: "奥山帆夏展 | JINEN gallery（東京） | 2020",//モーダルで右端に出る文字
         },
         show2: {
             flag: false,
@@ -48,7 +48,7 @@ let _data = {
             caption: "MAKII MASARU",
             tag: "show2",
             m_image: "./imgs/shows/2020/20-s4.jpg",
-            m_title: "MAKII MASARU FINE ARTS | 2020",
+            m_title: "たわいもない中に | MAKII MASARU FINE ARTS（東京） | 2020",
         },
         show3: {
             flag: false,
@@ -57,7 +57,7 @@ let _data = {
             caption: "ヨロコビto個展",
             tag: "show3",
             m_image: "./imgs/shows/2020/20-s5.jpg",
-            m_title: "ヨロコビto個展 | 2020",
+            m_title: "微睡の中 | ヨロコビto（東京） | 2020",
         },
         show4: {//2019
             flag: false,
@@ -66,7 +66,7 @@ let _data = {
             caption: "藝祭",
             tag: "show4",
             m_image: "./imgs/shows/2019/19-s1.jpg",
-            m_title: "藝祭 | geisai | 2019",
+            m_title: "藝祭 | 東京藝術大学（東京） | 2019",
         },
         show5: {
             flag: false,
@@ -75,7 +75,7 @@ let _data = {
             caption: "二人展",
             tag: "show5",
             m_image: "./imgs/shows/2019/19-s4.jpg",
-            m_title: "二人展 | hutariten | 2019",
+            m_title: "奥山帆夏・蛭田泰平ふたり展 | MAKII MASARU FINE ARTS（東京） | 2019",
         },
         show6: {
             flag: false,
@@ -84,7 +84,7 @@ let _data = {
             caption: "卒業制作学内展",
             tag: "show6",
             m_image: "./imgs/shows/2019/19-s6.jpg",
-            m_title: "東京芸術大学油画専攻卒業制作学内展 | 2019",
+            m_title: "東京芸術大学油画専攻卒業制作学内展 | 東京藝術大学 （東京）| 2019",
         },
         show7: {
             flag: false,
@@ -93,7 +93,7 @@ let _data = {
             caption: "卒業制作展",
             tag: "show7",
             m_image: "./imgs/shows/2019/19-s7.jpg",
-            m_title: "東京芸術大学油画専攻卒業制作展　| 東京都美術館 | 2019",
+            m_title: "東京芸術大学油画専攻卒業制作展　| 東京都美術館（東京） | 2019",
         },
 
     },

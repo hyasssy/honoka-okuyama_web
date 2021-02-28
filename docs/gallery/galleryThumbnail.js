@@ -72,7 +72,7 @@ let _data = {
             flag: false,
             img: "./imgs/thumbnail/2019/t-s2.jpg",
             description: "二人展　hutariten",
-            caption: "二人展",
+            caption: "ふたり展",
             tag: "show5",
             m_image: "./imgs/shows/2019/19-s4.jpg",
             m_title: "奥山帆夏・蛭田泰平ふたり展 | MAKII MASARU FINE ARTS（東京） | 2019",

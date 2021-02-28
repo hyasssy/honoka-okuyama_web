@@ -36,7 +36,7 @@ let _data = {
             flag: false,
             img: "./imgs/thumbnail/2020/t-s1.jpg",
             description: "JINEN　個展",//画像の説明、展示の名前
-            caption: "JINEN gallery",
+            caption: "奥山帆夏展",
             tag: "show1",
             m_image: "./imgs/shows/2020/20-s1.jpg",
             m_title: "奥山帆夏展 | JINEN gallery（東京） | 2020",//モーダルで右端に出る文字
@@ -45,7 +45,7 @@ let _data = {
             flag: false,
             img: "./imgs/thumbnail/2020/t-s2.jpg",
             description: "MAKII MASARU FINE ARTS展示風景_2 ",
-            caption: "MAKII MASARU",
+            caption: "たわいもない中に",
             tag: "show2",
             m_image: "./imgs/shows/2020/20-s4.jpg",
             m_title: "たわいもない中に | MAKII MASARU FINE ARTS（東京） | 2020",
@@ -54,7 +54,7 @@ let _data = {
             flag: false,
             img: "./imgs/thumbnail/2020/t-s3.jpg",
             description: "ヨロコビto個展展示風景",
-            caption: "ヨロコビto個展",
+            caption: "微睡の中",
             tag: "show3",
             m_image: "./imgs/shows/2020/20-s5.jpg",
             m_title: "微睡の中 | ヨロコビto（東京） | 2020",

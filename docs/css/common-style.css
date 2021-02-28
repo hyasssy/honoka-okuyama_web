@@ -10,17 +10,17 @@
 }
 @font-face {
   font-family: "HiraKakuGo";
-  src: url(../fonts/HiraKakuGo_W1.ttc);
+  src: url(../fonts/HiraKakuGo_W1.woff);
   font-weight: 200;
 }
 @font-face {
   font-family: "HiraKakuGo";
-  src: url(../fonts/HiraKakuGo_W3.ttc);
+  src: url(../fonts/HiraKakuGo_W3_subset.woff);
   font-weight: 300;
 }
 @font-face {
   font-family: "Yumin";
-  src: url(../fonts/YUMINL.TTF);
+  src: url(../fonts/YuminLight_subset.woff);
   font-weight: 300;
 }
 

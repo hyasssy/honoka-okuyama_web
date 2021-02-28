@@ -31,6 +31,7 @@ function checkKey(tag) {
 //データオブジェクト
 let _data = {
     shows: {
+        //仕様keyはtagと同じにすること。tagはid,keyとしても使われる内部処理用なので注意。captionはなるべく短く。
         show1: {//2020
             flag: false,
             img: "./imgs/thumbnail/2020/t-s1.jpg",
@@ -219,7 +220,7 @@ let _data = {
             img: "./imgs/thumbnail/2020/t-w13.jpg",
             description: "美唄2 2020_2",
             caption: "美唄",
-            tag: "works13",
+            tag: "works15",
             m_image: "./imgs/works/2020/20-w17.jpg",
             m_title: "美唄 | Bibai  2 | 2020",
         },

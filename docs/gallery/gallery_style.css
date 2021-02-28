@@ -127,7 +127,7 @@
 }
 .showbox img {
   max-width: 100%;
-  max-height: 90%;
+  max-height: 80vh;
 }
 .showtextbox {
   width: 35%;

@@ -1,4 +1,4 @@
-$(function () {
+window.onload = function () {
     // var scrollPosition;
     $('.js-modal-open').each(function () {
         $(this).on('click', function () {
@@ -19,7 +19,7 @@ $(function () {
         $('.js-modal').fadeOut();
         return false;
     });
-});
+}
 function checkKey(tag) {
     if (tag in _data.shows) {
         return _data.shows[tag];
